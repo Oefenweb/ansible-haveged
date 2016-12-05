@@ -1,0 +1,7 @@
+# test file for haveged
+---
+- hosts: localhost
+  connection: local
+  sudo: true
+  roles:
+    - ../../

@@ -1,0 +1,6 @@
+# defaults file for haveged
+---
+haveged_install: []
+
+haveged_daemon_args:
+  - '-w 1024'

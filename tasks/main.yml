@@ -1,0 +1,35 @@
+# tasks file for haveged
+---
+- name: install dependencies
+  apt:
+    name: "{{ item }}"
+    state: "{{ apt_install_state | default('latest') }}"
+    update_cache: true
+    cache_valid_time: "{{ apt_update_cache_valid_time | default(3600) }}"
+  with_items: "{{ haveged_dependencies }}"
+  tags:
+    - configuration
+    - haveged
+    - haveged-dependencies
+
+- name: install additional
+  apt:
+    name: "{{ item }}"
+    state: "{{ apt_install_state | default('latest') }}"
+  with_items: "{{ haveged_install }}"
+  tags:
+    - configuration
+    - haveged
+    - haveged-install
+
+- name: update configuration file - /etc/default/haveged.conf
+  template:
+    src: etc/default/haveged.j2
+    dest: /etc/default/haveged
+    owner: root
+    group: root
+    mode: 0644
+  tags:
+    - configuration
+    - haveged
+    - haveged-configuration

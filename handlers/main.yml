@@ -1,0 +1,6 @@
+# handlers file for haveged
+---
+- name: restart haveged
+  service:
+    name: haveged
+    state: restarted
