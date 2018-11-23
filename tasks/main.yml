@@ -2,11 +2,10 @@
 ---
 - name: install dependencies
   apt:
-    name: "{{ item }}"
+    name: "{{ haveged_dependencies }}"
     state: "{{ apt_install_state | default('latest') }}"
     update_cache: true
     cache_valid_time: "{{ apt_update_cache_valid_time | default(3600) }}"
-  with_items: "{{ haveged_dependencies }}"
   tags:
     - configuration
     - haveged
@@ -14,9 +13,8 @@
 
 - name: install additional
   apt:
-    name: "{{ item }}"
+    name: "{{ haveged_install }}"
     state: "{{ apt_install_state | default('latest') }}"
-  with_items: "{{ haveged_install }}"
   tags:
     - configuration
     - haveged
