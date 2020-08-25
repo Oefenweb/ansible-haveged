@@ -20,10 +20,10 @@
     - haveged
     - haveged-install
 
-- name: update configuration file - /etc/default/haveged.conf
+- name: update configuration file
   template:
-    src: etc/default/haveged.j2
-    dest: /etc/default/haveged
+    src: "{{ haveged_etc_default_file.lstrip('/') }}.j2"
+    dest: "{{ haveged_etc_default_file }}"
     owner: root
     group: root
     mode: 0644

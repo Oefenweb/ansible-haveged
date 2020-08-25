@@ -2,3 +2,4 @@
 ---
 haveged_dependencies:
   - haveged
+haveged_etc_default_file: /etc/default/haveged
