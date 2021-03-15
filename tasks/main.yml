@@ -1,4 +1,4 @@
-# tasks file for haveged
+# tasks file
 ---
 - name: install dependencies
   apt:
