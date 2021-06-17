@@ -1,6 +1,6 @@
 ## haveged
 
-[![Build Status](https://travis-ci.org/Oefenweb/ansible-haveged.svg?branch=master)](https://travis-ci.org/Oefenweb/ansible-haveged)
+[![CI](https://github.com/Oefenweb/ansible-haveged/workflows/CI/badge.svg)](https://github.com/Oefenweb/ansible-haveged/actions?query=workflow%3ACI)
 [![Ansible Galaxy](http://img.shields.io/badge/ansible--galaxy-haveged-blue.svg)](https://galaxy.ansible.com/Oefenweb/haveged)
 
 Set up [haveged](https://www.digitalocean.com/community/tutorials/how-to-setup-additional-entropy-for-cloud-servers-using-haveged) in Debian-like systems.
