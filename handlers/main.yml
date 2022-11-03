@@ -1,7 +1,7 @@
 # handlers file
 ---
 - name: restart haveged
-  service:
+  ansible.builtin.service:
     name: haveged
     state: restarted
   when: service_default_state | default('started') == 'started'
