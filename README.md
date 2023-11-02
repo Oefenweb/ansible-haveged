@@ -25,7 +25,7 @@ None
 ---
 - hosts: all
   roles:
-    - haveged
+    - oefenweb.haveged
 ```
 
 #### License
