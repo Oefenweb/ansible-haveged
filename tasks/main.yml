@@ -26,7 +26,7 @@
     dest: "{{ haveged_etc_default_file }}"
     owner: root
     group: root
-    mode: 0644
+    mode: '0644'
   notify: restart haveged
   tags:
     - configuration
